@@ -1,0 +1,38 @@
+#include <iostream>
+#include <fstream>
+#include <cmath>
+using namespace std;
+
+double logar(double a, double b)
+{
+    return log(b) / log(a);
+}
+
+
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+
+    ifstream file1;// для чтения
+    ofstream file3("stepen.txt");// для записи
+
+
+    double R;
+    double a = 3;
+   
+
+        file1.open("R.txt");
+
+        file1 >> R;
+        file1.close();
+
+        file3 << "X = " << logar(a, R);
+        file3.close();
+        cout << "x = " << logar(a, R) << "Результат записан в stepen.txt";
+
+  
+
+    return 0;
+
+}
